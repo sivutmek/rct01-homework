@@ -5,5 +5,10 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import TMDB from './TMDB';
+
+ReactDOM.render(
+  <App apiKey={TMDB.api_key} films={TMDB.films} />,
+  document.getElementById("root")
+);
 registerServiceWorker();
